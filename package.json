@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot to carry out Simple Tasks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/marcelpierres/discord-bot.git"
+  },
+  "author": "Marcel-Pierre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/marcelpierres/discord-bot/issues"
+  },
+  "homepage": "https://gitlab.com/marcelpierres/discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
