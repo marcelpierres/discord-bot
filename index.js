@@ -1,8 +1,13 @@
-const Discord = require("discord.js");
+const Discord = require("discord.js-commando");
 const token = require("./config");
 const client = new Discord.Client();
 const BotStats =['Protecting the Chat','Watching Over Users', 'Scanning', 'Threat Found', 'Eliminating Threat', 'Maintaining The Balance'];
 var duration = 10000;
+// locations of commands
+client.registry.registerGroup('utilities','Utilities');
+client.registry.registerDefaults();
+client.registry.registerCommandsIn(__dirname +"/components")
+
 // ready event
 client.on('ready',  () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -26,14 +31,15 @@ client.on('message', async msg => {
   if(msg.content.indexOf(token.prefix) !== 0) return;
 
   //commands
-  const args = msg.content.slice(token.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
+  //const args = msg.content.slice(token.prefix.length).trim().split(/ +/g);
+  //const command = args.shift().toLowerCase();
 
-  if (command === 'ping') {
+ /* if (command === 'ping') {
     msg.reply('pong');
-  }
+  }*/
 
-  if(command === "purge") {
+
+  /*if(command === "purge") {
     const modRole = msg.guild.roles.find(role => role.name === "Admin");
     const deleteCount = 100;
     // This command removes all messages from all users in the channel, up to 100.
@@ -46,8 +52,7 @@ client.on('message', async msg => {
     
      msg.channel.bulkDelete(deleteCount);
     }
-  
-
+  */
 
 });
 
