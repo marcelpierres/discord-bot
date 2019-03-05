@@ -19,6 +19,7 @@
   "homepage": "https://gitlab.com/marcelpierres/discord-bot#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
-    "discord.js-commando": "^0.10.0"
+    "discord.js-commando": "^0.10.0",
+    "opusscript": "0.0.6"
   }
 }

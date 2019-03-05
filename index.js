@@ -2,16 +2,19 @@ const Discord = require("discord.js-commando");
 const token = require("./config");
 const client = new Discord.Client();
 const BotStats =['Protecting the Chat','Watching Over Users', 'Scanning', 'Threat Found', 'Eliminating Threat', 'Maintaining The Balance'];
+const WakeStats = ['I Have Risen!','Good Morning Everyone!','I Am Back!', 'Lets Get This Bread','Another Day.... More Technology','Hey Everyone, Its Time to Program', 'Its Time to Learn','Ive Been Reborn','The Group Grows Stronger'];
 var duration = 10000;
 // locations of commands
 client.registry.registerGroup('utilities','Utilities');
+client.registry.registerGroup('music','Music');
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(__dirname +"/components")
 
 // ready event
 client.on('ready',  () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.channels.find(x => x.name ==="bot-docs").send("I Have Risen!");
+  let OnStat = WakeStats[Math.floor(Math.random()*WakeStats.length)];
+  client.channels.find(x => x.name ==="bot-docs").send(OnStat);
 
   //changing the status
   setInterval(function(){
@@ -20,6 +23,19 @@ client.on('ready',  () => {
     duration =Math.random() * (300000 - 10000) + 10000;
   },duration)
 });
+
+//Join Event
+client.on('guildMemberAdd', member =>{
+ console.log(member.user.username+" has joined our server!");
+ console.log(member);
+
+ var role = member.guild.roles.find('name','New Users');
+ member.addRole(role);
+
+ member.guild.channels.get('488538691334307843').send('***** '+member.user.username+'***** has join the team!!!!!!   :pray:');
+});
+
+
 
 
 
