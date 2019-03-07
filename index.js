@@ -1,6 +1,7 @@
 const Discord = require("discord.js-commando");
 const token = require("./config");
 const client = new Discord.Client();
+client.music = require("discord.js-musicbot-addon");
 const BotStats =['Protecting the Chat','Watching Over Users', 'Scanning', 'Threat Found', 'Eliminating Threat', 'Maintaining The Balance'];
 const WakeStats = ['I Have Risen!','Good Morning Everyone!','I Am Back!', 'Lets Get This Bread','Another Day.... More Technology','Hey Everyone, Its Time to Program', 'Its Time to Learn','Ive Been Reborn','The Group Grows Stronger'];
 var duration = 10000;
@@ -10,6 +11,37 @@ client.registry.registerGroup('utilities','Utilities');
 client.registry.registerGroup('music','Music');
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(__dirname +"/components")
+
+//==============================
+client.music.start(client, {
+  // Set the api key used for YouTube.
+  youtubeKey: "AIzaSyB2nld15uFvZNoYe4k2lwmxaaMLqP-9wwA",
+
+  // The PLAY command Object.
+  play: {
+    // Usage text for the help command.
+    usage: "{{prefix}}play some tunes",
+    // Whether or not to exclude the command from the help command.
+    exclude: false  
+  },
+
+  // Make it so anyone in the voice channel can skip the
+  // currently playing song.
+  anyoneCanSkip: true,
+
+  // Make it so the owner (you) bypass permissions for music.
+  ownerOverMember: true,
+  ownerID: "483143919111241738",
+
+  // The cooldown Object.
+  cooldown: {
+    // This disables the cooldown. Not recommended.
+    enabled: false
+  }
+});
+
+
+
 
 // ready event
 client.on('ready',  () => {

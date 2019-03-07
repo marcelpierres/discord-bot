@@ -1,7 +1,7 @@
 const Discord = require('discord.js-commando');
 const YTDL = require('ytdl-core');
 
-function play(connection, msg){
+/*function play(connection, msg){
  var server = servers[msg.guild.id]
  server.dispatcher = connection.playStream(YTDL(server.queue[0],{filter:"audioonly"}));
  console.log(server.queue[0]);
@@ -61,4 +61,4 @@ class JoinChannelCommand extends Discord.Command{
     }
 
 }
-module.exports = JoinChannelCommand;
+module.exports = JoinChannelCommand;*/
