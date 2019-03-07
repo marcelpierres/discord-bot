@@ -18,8 +18,18 @@
   },
   "homepage": "https://gitlab.com/marcelpierres/discord-bot#readme",
   "dependencies": {
+    "bufferutil": "^3.0.5",
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
-    "opusscript": "0.0.6"
+    "erlpack": "github:discordapp/erlpack",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-binaries": "^4.0.0",
+    "libsodium-wrappers": "^0.7.4",
+    "node-opus": "^0.2.9",
+    "opusscript": "0.0.6",
+    "save": "^2.3.3",
+    "sodium": "^2.0.3",
+    "sqlite": "^2.9.3",
+    "uws": "^9.148.0"
   }
 }
