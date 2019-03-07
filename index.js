@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const BotStats =['Protecting the Chat','Watching Over Users', 'Scanning', 'Threat Found', 'Eliminating Threat', 'Maintaining The Balance'];
 const WakeStats = ['I Have Risen!','Good Morning Everyone!','I Am Back!', 'Lets Get This Bread','Another Day.... More Technology','Hey Everyone, Its Time to Program', 'Its Time to Learn','Ive Been Reborn','The Group Grows Stronger'];
 var duration = 10000;
+global.servers = {};
 // locations of commands
 client.registry.registerGroup('utilities','Utilities');
 client.registry.registerGroup('music','Music');

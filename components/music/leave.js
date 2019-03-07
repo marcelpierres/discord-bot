@@ -12,11 +12,21 @@ class LeaveChannelCommand extends Discord.Command{
     }
 
     async run (msg, args){
+        const modRole = msg.guild.roles.find(role => role.name === "Admin");
+        const deleteCount = 100;
+        // This command removes all messages from all users in the channel, up to 100.
+    
+        if (!modRole)
+        return console.log("The Mods role does not exist");
+    
+        if (!msg.member.roles.has(modRole.id))
+        return msg.reply("You can't use this command.");
+
         if (msg.guild.voiceConnection){
             msg.guild.voiceConnection.disconnect();
         }
         else{
-            msg.reply("I must be in a voice channel to be removed Master");
+            msg.reply("I must be in a voice channel to be removed");
         }
 
     }
