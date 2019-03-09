@@ -7,7 +7,6 @@ var duration = 10000;
 global.servers = {};
 // locations of commands
 client.registry.registerGroup('utilities','Utilities');
-client.registry.registerGroup('music','Music');
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(__dirname +"/components")
 
