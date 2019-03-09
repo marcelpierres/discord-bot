@@ -23,7 +23,11 @@ constructor(client){
         
          
         var myInfo = new discordjs.RichEmbed()
-        .setDescription('**SERVER RULES**')
+        .setTitle('__**CASUAL CONVERSATION RULES**__')
+        .addField("Offensiveness","1.) Use of offensive words, phrases, or insults towards other people to include but not limited to insulting other races, ethnicities, nationalities, religions, cultures, professions, genders or sexual orientations is strictly prohibited.")
+        .addField("Casual-Conversations","This channel is used to talk about anything that is irrelevant.")
+        .addField("Breaking The Rules?","If you see anyone breaking #server-rules let them know. If they do not stop be sure to report them by @mentioning any 'Cyber Users' or 'Admin' if none are available. If you don't do this, little sympathy will be shown if you decide to rat someone out the moment you get in trouble.")
+        .setFooter("**If You Have Any FeedBack Post It In The #server-feedback Channel**")
         msg.channel.sendEmbed(myInfo);
 
 

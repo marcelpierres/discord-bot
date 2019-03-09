@@ -24,7 +24,8 @@ constructor(client){
         
          
         var myInfo = new discordjs.RichEmbed()
-        .setDescription('**SERVER RULES**')
+        .setTitle('__**SEVER FEEDBACK RULES**__')
+        .addField("SERVER FEED BACK","Have any feedback to improve the server? I am here to fulfill those needs.")
         msg.channel.sendEmbed(myInfo);
 
 
